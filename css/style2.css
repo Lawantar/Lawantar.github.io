@@ -310,9 +310,12 @@ og{
 	opacity: 0.7;
 	display: table-cell;
 	text-align: center;
+
+}
+.img{
+	text-align: center;
 	 display: block;
   margin: 0 auto;
-
 }
 
 
