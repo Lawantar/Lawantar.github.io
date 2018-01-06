@@ -1,4 +1,20 @@
-﻿<html lang="ru">
+﻿<?php
+session_start();
+
+$admin = 'admin';
+$pass = '12345';
+
+if($POST['submit']){
+	if($admin == $_POST['username'] AND $pass == $_POST['password']){
+		$_SESSION['admin'] = $admin;
+		header("location: P2.php");
+		exit;
+	}
+	else echo'<p>Ты петух!</p>';
+
+}
+?>
+<html lang="ru">
 <head>
 	<meta charset="UTF-8">
 	<title>Авторизация</title>
@@ -16,7 +32,7 @@
 		<div class="dws-input">
 			<input type="password" name="password" required placeholder="Введите пароль">
 		</div>
-		<a class="dws-submit" href="P2.html">ВОЙТИ</a> 
+		<a class="dws-submit" name="submit" href="P2.html">ВОЙТИ</a> 
 		<br/>
 		<br/>
 		<a href="#">Забыли логин или пароль?</a>
