@@ -1,19 +1,4 @@
-﻿<?php
-session_start();
-
-$admin = 'admin';
-$pass = '12345';
-
-if($POST['submit']){
-	if($admin == $_POST['username'] AND $pass == $_POST['password']){
-		$_SESSION['admin'] = $admin;
-		header("location: P2.php");
-		exit;
-	}
-	else echo'<p>Ты петух!</p>';
-
-}
-?>
+﻿
 <html lang="ru">
 <head>
 	<meta charset="UTF-8">
@@ -45,3 +30,19 @@ if($POST['submit']){
 	</div>
 </div>
 </body>
+<?php
+session_start();
+
+$admin = 'admin';
+$pass = '12345';
+
+if($POST['submit']){
+	if($admin == $_POST['username'] AND $pass == $_POST['password']){
+		$_SESSION['admin'] = $admin;
+		header("location: P2.php");
+		exit;
+	}
+	else echo'<p>Ты петух!</p>';
+
+}
+?>
